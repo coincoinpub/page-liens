@@ -1,106 +1,119 @@
-:root {
-  --amber: #f5a623;
-  --amber-dark: #d3860b;
-  --ink: #23201a;
-  --paper: #fffaf0;
-  --card: #ffffff;
-  --border: #ece3d2;
-  --muted: #8a8375;
-  color-scheme: light;
+:root{
+  /* Coin Coin brand palette — reprise de coin-coin.fr */
+  --noir:#140d1c;
+  --noir-2:#474650;
+  --orange:#ec6527;
+  --violet:#672290;
+  --jaune:#fbc117;
+  --creme:#ffffff;
+  --gris:#8a8194;
+  --line:rgba(239,232,219,.1);
+  --pad:max(6vw, calc((100vw - 1200px) / 2));
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html,body{ background:var(--noir); }
+body{
+  font-family:'Poppins',sans-serif;
+  color:var(--creme);
+  overflow-x:hidden;
+}
+.mono{ font-family:'JetBrains Mono',monospace; }
+
+img{ max-width:100%; display:block; }
+
+/* grain overlay, comme sur coin-coin.fr */
+body::before{
+  content:""; position:fixed; inset:0; z-index:200; pointer-events:none;
+  opacity:.05; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-* { box-sizing: border-box; }
+header{
+  padding:26px var(--pad);
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  flex-wrap:wrap;
+  border-bottom:1px solid var(--line);
+}
+.logo{ display:flex; align-items:center; gap:12px; text-decoration:none; transition:opacity .25s ease; }
+.logo:hover{ opacity:.8; }
+.logo img{ width:48px; height:48px; }
+.logo-word{ font-weight:800; font-size:1.25rem; letter-spacing:.01em; color:var(--creme); }
+.logo-word span{ color:var(--orange); }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: var(--paper);
-  color: var(--ink);
+.nav-cta{
+  font-size:.8rem; padding:11px 20px; border-radius:100px;
+  border:1px solid var(--line); color:var(--creme); text-decoration:none;
+  transition:background .25s, color .25s, border-color .25s;
+}
+.nav-cta:hover{ background:var(--creme); color:var(--noir); border-color:var(--creme); }
+
+main{ max-width:1200px; margin:0 auto; padding:0 var(--pad); }
+
+.intro-hero{ padding:70px 0 20px; }
+.intro-eyebrow{
+  font-size:.75rem; letter-spacing:.2em; color:var(--orange);
+  margin-bottom:20px; text-transform:uppercase;
+}
+.intro-hero h1{
+  font-weight:900; letter-spacing:-.02em; line-height:1.05;
+  font-size:clamp(2rem, 5vw, 3.4rem);
+  max-width:18ch;
+}
+.intro-lede{
+  margin-top:22px; max-width:56ch; color:var(--gris);
+  font-size:1.02rem; line-height:1.6;
 }
 
-.topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.25rem 2rem;
-  background: var(--card);
-  border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
+.links-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:24px;
+  margin:50px 0 90px;
 }
 
-.brand { display: flex; align-items: center; gap: .75rem; }
-.brand-mark { font-size: 2rem; }
-.brand h1 { margin: 0; font-size: 1.25rem; }
-.subtitle { margin: 0; color: var(--muted); font-size: .9rem; }
-
-.topbar-actions { display: flex; align-items: center; gap: 1rem; }
-
-main { max-width: 1100px; margin: 0 auto; padding: 1.5rem 2rem 4rem; }
-
-.intro { color: var(--muted); max-width: 70ch; line-height: 1.5; }
-
-.btn {
-  border: 1px solid var(--border);
-  background: #fff;
-  color: var(--ink);
-  padding: .5rem .8rem;
-  border-radius: 8px;
-  font-size: .82rem;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: .35rem;
-  font-weight: 500;
-  transition: transform .05s ease, background .15s ease;
+.link-card{
+  background:var(--noir-2);
+  border:1px solid var(--line);
+  border-top:3px solid var(--orange);
+  border-radius:16px;
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+  gap:.6rem;
+  color:inherit;
+  text-decoration:none;
+  transition:transform .25s cubic-bezier(.2,1,.3,1), border-color .25s ease;
 }
-.btn:hover { background: #faf5ea; }
-.btn:active { transform: scale(.97); }
+a.link-card:hover{ transform:translateY(-6px); border-color:var(--orange); }
+a.link-card:active{ transform:translateY(-2px); }
 
-.btn-outline { border-color: var(--amber); color: var(--amber-dark); background: #fff; }
-.btn-outline:hover { background: #fdf0d7; }
+.link-icon{ font-size:2rem; line-height:1; }
+.link-title{ margin:0; font-size:1.1rem; font-weight:700; }
+.link-desc{ margin:0; color:var(--gris); font-size:.9rem; line-height:1.5; flex:1; }
 
-.links-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.5rem;
+.link-card.is-missing{ cursor:default; border-top-color:var(--line); }
+.link-missing-note{
+  align-self:flex-start;
+  font-size:.68rem;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  background:rgba(239,232,219,.08);
+  color:var(--gris);
+  padding:.25rem .6rem;
+  border-radius:999px;
+  font-weight:600;
 }
 
-.link-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  color: inherit;
-  text-decoration: none;
-  transition: box-shadow .15s ease, transform .05s ease;
+footer{
+  padding:30px var(--pad); border-top:1px solid var(--line);
+  font-size:.82rem; color:var(--gris);
+  text-align:center;
 }
-a.link-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,.06); transform: translateY(-2px); }
-a.link-card:active { transform: translateY(0); }
+footer a{ color:var(--gris); text-decoration:none; transition:color .2s ease; }
+footer a:hover{ color:var(--orange); }
 
-.link-icon { font-size: 2rem; line-height: 1; }
-.link-title { margin: 0; font-size: 1.05rem; }
-.link-desc { margin: 0; color: var(--muted); font-size: .85rem; line-height: 1.4; flex: 1; }
-
-.link-card.is-missing { cursor: default; }
-.link-missing-note {
-  align-self: flex-start;
-  font-size: .72rem;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  background: #f1eee6;
-  color: var(--muted);
-  padding: .2rem .55rem;
-  border-radius: 999px;
-  font-weight: 600;
-}
-
-@media (max-width: 600px) {
-  .topbar { padding: 1rem; }
-  main { padding: 1rem 1rem 3rem; }
+@media(max-width:600px){
+  header{ padding:20px 6vw; }
+  main{ padding:0 6vw; }
 }

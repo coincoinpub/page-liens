@@ -3,13 +3,16 @@
 Page statique qui centralise tous les raccourcis Coin Coin : Drive, Upload,
 Publi (validation hebdo des réseaux), Jeu, Dépliant, Muscu, RDV et GitHub.
 
-Même style visuel que la page de validation hebdo (`coincoinpub/reseaux`).
+Reprend la charte graphique du site principal (`coincoinpub/site`) : fond
+sombre `#140d1c`, accents orange `#ec6527` / jaune `#fbc117`, polices Poppins
+et JetBrains Mono, logo Coin Coin.
 
 ## Mise en ligne
 
-Site 100% statique (`index.html`, `style.css`, `liens.js`), aucune dépendance
-serveur : il suffit de déposer les 3 fichiers sur n'importe quel hébergement
-web (Hostinger, GitHub Pages, etc.).
+Site 100% statique (`index.html`, `style.css`, `liens.js`, `assets/img/logo.svg`),
+aucune dépendance serveur : il suffit de déposer ces fichiers (en gardant la
+même arborescence) sur n'importe quel hébergement web (Hostinger, GitHub
+Pages, etc.).
 
 ## Modifier les liens
 
