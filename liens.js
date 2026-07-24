@@ -49,7 +49,7 @@ const INTERNAL_LINKS = [
     icon: '💸',
     title: 'Compta Tiime',
     description: 'App de compta : Devis / Facture',
-    url: 'https://coin-coin.fr/publi',
+    url: 'https://apps.tiime.fr/companies/302066/invoice/quotes?page=1',
   },
   {
     icon: '🐙',
