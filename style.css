@@ -81,43 +81,61 @@ main{ max-width:1200px; margin:0 auto; padding:0 var(--pad); }
 
 .links-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-  gap:24px;
+  grid-template-columns:repeat(auto-fill, minmax(130px, 1fr));
+  gap:22px 16px;
 }
 
 .links-empty{ color:var(--gris); font-size:.9rem; font-style:italic; }
 
+/* tuiles façon icônes d'app sur écran d'accueil de téléphone */
 .link-card{
-  background:var(--noir-2);
-  border:1px solid var(--line);
-  border-top:3px solid var(--orange);
-  border-radius:16px;
-  padding:24px;
   display:flex;
   flex-direction:column;
-  gap:.6rem;
+  align-items:center;
+  text-align:center;
+  gap:10px;
   color:inherit;
   text-decoration:none;
-  transition:transform .25s cubic-bezier(.2,1,.3,1), border-color .25s ease;
+  padding:6px;
+  border-radius:14px;
+  transition:transform .2s cubic-bezier(.2,1,.3,1), background .2s ease;
 }
-a.link-card:hover{ transform:translateY(-6px); border-color:var(--orange); }
-a.link-card:active{ transform:translateY(-2px); }
+a.link-card:hover{ transform:translateY(-4px) scale(1.04); background:rgba(255,255,255,.04); }
+a.link-card:active{ transform:translateY(-1px) scale(1.01); }
 
-.link-icon{ font-size:2rem; line-height:1; }
-.link-title{ margin:0; font-size:1.1rem; font-weight:700; }
-.link-desc{ margin:0; color:var(--gris); font-size:.9rem; line-height:1.5; flex:1; }
+.link-icon{
+  width:64px; height:64px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.9rem; line-height:1;
+  border-radius:22%;
+  background:linear-gradient(145deg, var(--orange), #c8481a);
+  box-shadow:0 8px 18px -8px rgba(236,101,39,.55), inset 0 1px 0 rgba(255,255,255,.15);
+}
+.link-title{ margin:0; font-size:.82rem; font-weight:600; line-height:1.25; }
+.link-desc{
+  margin:0; color:var(--gris); font-size:.72rem; line-height:1.4;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+}
 
-.link-card.is-missing{ cursor:default; border-top-color:var(--line); }
+.link-card.is-missing{ cursor:default; }
+.link-card.is-missing .link-icon{
+  background:var(--noir-2); border:1px solid var(--line);
+  box-shadow:none;
+}
 .link-missing-note{
-  align-self:flex-start;
-  font-size:.68rem;
+  font-size:.62rem;
   text-transform:uppercase;
-  letter-spacing:.1em;
+  letter-spacing:.08em;
   background:rgba(239,232,219,.08);
   color:var(--gris);
-  padding:.25rem .6rem;
+  padding:.2rem .55rem;
   border-radius:999px;
   font-weight:600;
+}
+
+@media(max-width:600px){
+  .links-grid{ grid-template-columns:repeat(2, 1fr); gap:26px 12px; }
+  .link-icon{ width:60px; height:60px; font-size:1.75rem; }
 }
 
 footer{
