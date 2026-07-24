@@ -5,62 +5,55 @@
 const INTERNAL_LINKS = [
   {
     icon: '📁',
-    title: 'Drive',
-    description: "Fichiers, visuels et documents partagés de l'agence.",
-    url: '',
-  },
-  {
-    icon: '⬆️',
-    title: 'Upload',
-    description: 'Déposer rapidement un fichier ou un visuel.',
-    url: '',
+    title: 'Drive Coin coin',
+    description: "Fichiers, visuels et documents de l'agence.",
+    url: 'https://coin-coin.fr/drive',
   },
   {
     icon: '🦆',
-    title: 'Publi (réseaux)',
+    title: 'Publication (réseaux)',
     description: 'Validation hebdo des posts Facebook / Instagram / TikTok.',
     url: 'https://coin-coin.fr/publi',
   },
   {
-    icon: '🎮',
-    title: 'Jeu',
-    description: 'Page du jeu concours.',
-    url: '',
-  },
-  {
-    icon: '📄',
-    title: 'Dépliant',
-    description: 'Dépliant / plaquette de présentation.',
-    url: '',
-  },
-  {
     icon: '💪',
-    title: 'Muscu',
-    description: 'Page muscu.',
-    url: '',
-  },
-  {
-    icon: '📅',
-    title: 'RDV',
-    description: 'Prise de rendez-vous.',
-    url: '',
+    title: 'Musculation',
+    description: 'Page entrainement musculation.',
+    url: 'https://coin-coin.fr/muscu/',
   },
   {
     icon: '🐙',
-    title: 'GitHub',
-    description: 'Dépôt du code (coincoinpub/reseaux).',
-    url: 'https://github.com/coincoinpub/reseaux',
+    title: 'GitHub Coin coin',
+    description: 'Dépôt de code (coincoinpub).',
+    url: 'https://github.com/coincoinpub/',
   },
 ];
 
 const CLIENT_LINKS = [
-  // Exemple :
-  // {
-  //   icon: '🍟',
-  //   title: 'Frite Family',
-  //   description: 'Espace de suivi du projet client.',
-  //   url: '',
-  // },
+  {
+    icon: '⬆️',
+    title: 'Upload pour les clients',
+    description: 'Pour les clients : Déposer rapidement un fichier ou un visuel.',
+    url: 'https://coin-coin.fr/drive/upload/',
+  },
+  {
+    icon: '🎮',
+    title: 'Jeu',
+    description: 'Page du mini jeu Coin coin.',
+    url: 'https://coin-coin.fr/jeu/',
+  },
+  {
+    icon: '📄',
+    title: 'Dépliant tarifaire',
+    description: 'Pour les clients : Dépliant / plaquette de présentation.',
+    url: 'https://coin-coin.fr/depliant/',
+  },
+  {
+    icon: '📅',
+    title: 'RDV client',
+    description: 'Pour les clients : Page de prise de rendez-vous.',
+    url: 'https://coin-coin.fr/rdv/',
+  },
 ];
 
 function renderLink(link) {
