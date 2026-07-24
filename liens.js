@@ -1,6 +1,8 @@
 // Pour modifier un lien : change la valeur "url" ci-dessous.
 // Laisser "" affiche la carte comme "lien à ajouter".
-const LINKS = [
+// Pour ajouter un lien : copie un bloc { ... } dans le tableau concerné.
+
+const INTERNAL_LINKS = [
   {
     icon: '📁',
     title: 'Drive',
@@ -51,7 +53,15 @@ const LINKS = [
   },
 ];
 
-const linksGrid = document.getElementById('links');
+const CLIENT_LINKS = [
+  // Exemple :
+  // {
+  //   icon: '🍟',
+  //   title: 'Frite Family',
+  //   description: 'Espace de suivi du projet client.',
+  //   url: '',
+  // },
+];
 
 function renderLink(link) {
   const card = document.createElement(link.url ? 'a' : 'div');
@@ -67,7 +77,7 @@ function renderLink(link) {
 
   card.innerHTML = `
     <span class="link-icon">${link.icon}</span>
-    <h2 class="link-title">${link.title}</h2>
+    <h3 class="link-title">${link.title}</h3>
     <p class="link-desc">${link.description}</p>
     ${missing ? '<span class="link-missing-note">Lien à ajouter</span>' : ''}
   `;
@@ -75,4 +85,14 @@ function renderLink(link) {
   return card;
 }
 
-LINKS.forEach((link) => linksGrid.appendChild(renderLink(link)));
+function renderGroup(containerId, links, emptyMessage) {
+  const container = document.getElementById(containerId);
+  if (links.length === 0) {
+    container.innerHTML = `<p class="links-empty">${emptyMessage}</p>`;
+    return;
+  }
+  links.forEach((link) => container.appendChild(renderLink(link)));
+}
+
+renderGroup('links-interne', INTERNAL_LINKS, 'Aucun lien interne pour le moment.');
+renderGroup('links-client', CLIENT_LINKS, 'Aucun lien client pour le moment.');

@@ -65,12 +65,27 @@ main{ max-width:1200px; margin:0 auto; padding:0 var(--pad); }
   font-size:1.02rem; line-height:1.6;
 }
 
+.links-section{ margin-top:40px; margin-bottom:60px; }
+.links-section:last-of-type{ margin-bottom:90px; }
+
+.section-title{
+  font-size:.8rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--creme); margin-bottom:22px; padding-bottom:12px;
+  border-bottom:1px solid var(--line);
+  position:relative;
+}
+.section-title::after{
+  content:""; position:absolute; left:0; bottom:-1px; width:44px; height:2px;
+  background:var(--orange);
+}
+
 .links-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
   gap:24px;
-  margin:50px 0 90px;
 }
+
+.links-empty{ color:var(--gris); font-size:.9rem; font-style:italic; }
 
 .link-card{
   background:var(--noir-2);
