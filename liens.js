@@ -4,22 +4,52 @@
 
 const INTERNAL_LINKS = [
   {
-    icon: '📁',
+    icon: '💻',
     title: 'Drive Coin coin',
     description: "Fichiers, visuels et documents de l'agence.",
     url: 'https://coin-coin.fr/drive',
   },
   {
-    icon: '🦆',
+    icon: '🚨',
+    title: 'Slack Coin coin',
+    description: "Messages pro, automatisation Claude",
+    url: 'https://coin-coin-hq.slack.com',
+  },
+  {
+    icon: '👔',
+    title: 'CRM',
+    description: "CRM, clients",
+    url: 'https://app.notion.com/p/38eb3cec8db98074814fd56d9f4050fa?v=38eb3cec8db981bc9999000cb24f4719&source=copy_link',
+  },
+  {
+    icon: '✏️',
+    title: 'Canva',
+    description: "Canva Coin coin, dossier Hebdo",
+    url: 'https://www.canva.com/folder/FAHOIXY_a2s',
+  },
+  {
+    icon: '📱',
     title: 'Publication (réseaux)',
     description: 'Validation hebdo des posts Facebook / Instagram / TikTok.',
     url: 'https://coin-coin.fr/publi',
   },
   {
-    icon: '💪',
-    title: 'Musculation',
-    description: 'Page entrainement musculation.',
-    url: 'https://coin-coin.fr/muscu/',
+    icon: '❤️️',
+    title: 'META Business',
+    description: 'Publications Facebook / Instagram.',
+    url: 'https://business.facebook.com/latest/posts/published_posts/?business_id=163910224293718&asset_id=816506288209564',
+  },
+  {
+    icon: '🎬',
+    title: 'TikTok',
+    description: 'Publication TikTok.',
+    url: 'https://www.tiktok.com/tiktokstudio?lang=fr',
+  },
+  {
+    icon: '💸',
+    title: 'Compta Tiime',
+    description: 'App de compta : Devis / Facture',
+    url: 'https://coin-coin.fr/publi',
   },
   {
     icon: '🐙',
@@ -27,6 +57,13 @@ const INTERNAL_LINKS = [
     description: 'Dépôt de code (coincoinpub).',
     url: 'https://github.com/coincoinpub/',
   },
+  {
+    icon: '💪',
+    title: 'Musculation',
+    description: 'Page entrainement musculation.',
+    url: 'https://coin-coin.fr/muscu/',
+  },
+
 ];
 
 const CLIENT_LINKS = [
