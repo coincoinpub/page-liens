@@ -89,7 +89,7 @@ const PROD_LINKS = [
   },
   {
     icon: '📱',
-    title: 'Publication (réseaux)',
+    title: 'Publication hebdo',
     description: 'Validation hebdo des posts Facebook / Instagram / TikTok.',
     url: 'https://coin-coin.fr/publi',
   },
@@ -110,6 +110,18 @@ const PROD_LINKS = [
     title: 'GitHub Coin coin',
     description: 'Dépôt de code (coincoinpub).',
     url: 'https://github.com/coincoinpub/',
+  },
+  {
+    icon: '🖨️',
+    title: 'RP',
+    description: 'RealisaPrint : commandes print.',
+    url: 'https://www.realisaprint.com/',
+  },
+  {
+    icon: '🖥️',
+    title: 'Hostinger',
+    description: 'hPanel : hébergement, cache, fichiers.',
+    url: 'https://hpanel.hostinger.com/',
   },
 ];
 
