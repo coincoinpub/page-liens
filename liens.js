@@ -2,6 +2,45 @@
 // Laisser "" affiche la carte comme "lien à ajouter".
 // Pour ajouter un lien : copie un bloc { ... } dans le tableau concerné.
 
+const AI_LINKS = [
+  {
+    icon: '🤖',
+    title: 'Claude',
+    description: "Assistant IA Anthropic.",
+    url: 'https://claude.ai/new',
+  },
+  {
+    icon: '⌨️',
+    title: 'Claude Code',
+    description: "Assistant IA pour le code et l'automatisation.",
+    url: 'https://claude.ai/code',
+  },
+  {
+    icon: '✨',
+    title: 'Gemini (Nano Banana)',
+    description: "IA Google, génération d'images.",
+    url: 'https://gemini.google.com/app?utm_source=app_launcher&utm_medium=owned&utm_campaign=base_all',
+  },
+  {
+    icon: '🎙️',
+    title: 'ElevenLabs',
+    description: "Génération et clonage de voix.",
+    url: 'https://elevenlabs.io/app/home',
+  },
+  {
+    icon: '🪄',
+    title: 'Firefly',
+    description: "IA générative Adobe (images, effets).",
+    url: 'https://firefly.adobe.com/',
+  },
+  {
+    icon: '🎵',
+    title: 'Suno',
+    description: "Génération de musique par IA.",
+    url: 'https://suno.com/create',
+  },
+];
+
 const INTERNAL_LINKS = [
   {
     icon: '💻',
@@ -124,5 +163,6 @@ function renderGroup(containerId, links, emptyMessage) {
   links.forEach((link) => container.appendChild(renderLink(link)));
 }
 
+renderGroup('links-ia', AI_LINKS, 'Aucun lien IA pour le moment.');
 renderGroup('links-interne', INTERNAL_LINKS, 'Aucun lien interne pour le moment.');
 renderGroup('links-client', CLIENT_LINKS, 'Aucun lien client pour le moment.');
