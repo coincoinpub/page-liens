@@ -44,15 +44,9 @@ const AI_LINKS = [
 const INTERNAL_LINKS = [
   {
     icon: '💻',
-    title: 'Drive Coin coin',
+    title: 'Drive',
     description: "Fichiers, visuels et documents de l'agence.",
     url: 'https://coin-coin.fr/drive',
-  },
-  {
-    icon: '🚨',
-    title: 'Slack Coin coin',
-    description: "Messages pro, automatisation Claude",
-    url: 'https://coin-coin-hq.slack.com',
   },
   {
     icon: '👔',
@@ -61,10 +55,37 @@ const INTERNAL_LINKS = [
     url: 'https://app.notion.com/p/38eb3cec8db98074814fd56d9f4050fa?v=38eb3cec8db981bc9999000cb24f4719&source=copy_link',
   },
   {
+    icon: '💸',
+    title: 'Compta Tiime',
+    description: 'App de compta : Devis / Facture',
+    url: 'https://apps.tiime.fr/companies/302066/invoice/quotes?page=1',
+  },
+  {
+    icon: '🚨',
+    title: 'Slack',
+    description: "Messages pro, automatisation Claude",
+    url: 'https://coin-coin-hq.slack.com',
+  },
+  {
+    icon: '📧',
+    title: 'Gmail',
+    description: "Messagerie email.",
+    url: 'https://mail.google.com/mail/u/1/#inbox',
+  },
+];
+
+const PROD_LINKS = [
+  {
     icon: '✏️',
     title: 'Canva',
     description: "Canva Coin coin, dossier Hebdo",
     url: 'https://www.canva.com/folder/FAHOIXY_a2s',
+  },
+  {
+    icon: '🎨',
+    title: 'Adobe Express',
+    description: "Création graphique rapide.",
+    url: 'https://new.express.adobe.com/',
   },
   {
     icon: '📱',
@@ -85,27 +106,29 @@ const INTERNAL_LINKS = [
     url: 'https://www.tiktok.com/tiktokstudio?lang=fr',
   },
   {
-    icon: '💸',
-    title: 'Compta Tiime',
-    description: 'App de compta : Devis / Facture',
-    url: 'https://apps.tiime.fr/companies/302066/invoice/quotes?page=1',
-  },
-  {
     icon: '🐙',
     title: 'GitHub Coin coin',
     description: 'Dépôt de code (coincoinpub).',
     url: 'https://github.com/coincoinpub/',
   },
+];
+
+const PERSO_LINKS = [
   {
     icon: '💪',
     title: 'Musculation',
     description: 'Page entrainement musculation.',
     url: 'https://coin-coin.fr/muscu/',
   },
-
 ];
 
 const CLIENT_LINKS = [
+  {
+    icon: '🌐',
+    title: 'Site Coin coin Publicité',
+    description: "Site vitrine de l'agence.",
+    url: 'https://pub.coin-coin.fr',
+  },
   {
     icon: '⬆️',
     title: 'Upload pour les clients',
@@ -165,4 +188,6 @@ function renderGroup(containerId, links, emptyMessage) {
 
 renderGroup('links-ia', AI_LINKS, 'Aucun lien IA pour le moment.');
 renderGroup('links-interne', INTERNAL_LINKS, 'Aucun lien interne pour le moment.');
+renderGroup('links-prod', PROD_LINKS, 'Aucun lien pour le moment.');
+renderGroup('links-perso', PERSO_LINKS, 'Aucun lien pour le moment.');
 renderGroup('links-client', CLIENT_LINKS, 'Aucun lien client pour le moment.');
